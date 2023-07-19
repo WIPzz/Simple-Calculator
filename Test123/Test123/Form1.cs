@@ -40,7 +40,7 @@ namespace Test123
             textBox1.Clear();
             textBox1.Text = textBox1.Text + button.Text;
             oper = textBox1.Text;
-            textBox3.Text = oper;
+            textBox3.Text = oper +  num1.ToString();
             textBox1.Clear();
         }
 
