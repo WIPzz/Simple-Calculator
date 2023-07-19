@@ -40,7 +40,7 @@ namespace Test123
             textBox1.Clear();
             textBox1.Text = textBox1.Text + button.Text;
             oper = textBox1.Text;
-            textBox3.Text = oper +  num1.ToString();
+            textBox3.Text = num1.ToString() + oper;
             textBox1.Clear();
         }
 
@@ -49,6 +49,7 @@ namespace Test123
         {
             Button button = (Button)sender;
             num2 = Convert.ToDouble(textBox1.Text);
+            textBox3.Text = num1.ToString() + oper + num2.ToString();
             textBox2.Clear();
             if (oper == "+")
                 resultNum = num1 + num2;
@@ -58,6 +59,7 @@ namespace Test123
                 resultNum = num1 * num2;
             else resultNum = num1 / num2;
             textBox2.Text = resultNum.ToString();
+            textBox1.Clear();
 
         }
 
