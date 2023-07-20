@@ -28,6 +28,8 @@ namespace Test123
         {
             if (textBox1.Text == "0")
                 textBox1.Clear();
+            else if (!string.IsNullOrWhiteSpace(textBox2.Text))
+                return;
             Button button = (Button)sender;
             textBox1.Text = textBox1.Text + button.Text;
         }
@@ -35,6 +37,8 @@ namespace Test123
         // Operator Button
         private void operatorBttn(object sender, EventArgs e)
         {
+            if (textBox1.Text == "0" | !string.IsNullOrWhiteSpace(textBox2.Text))
+                return;
             Button button = (Button)sender;
             num1 = Convert.ToDouble(textBox1.Text);
             textBox1.Clear();
@@ -47,6 +51,8 @@ namespace Test123
         // Equal Button
         private void resultBttn(object sender, EventArgs e)
         {
+            if (!string.IsNullOrWhiteSpace(textBox2.Text))
+                return;
             Button button = (Button)sender;
             num2 = Convert.ToDouble(textBox1.Text);
             textBox3.Text = num1.ToString() + oper + num2.ToString();
