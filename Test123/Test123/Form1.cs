@@ -51,7 +51,7 @@ namespace Test123
         // Equal Button
         private void resultBttn(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBox2.Text))
+            if (!string.IsNullOrWhiteSpace(textBox2.Text) | textBox1.Text == "0")
                 return;
             Button button = (Button)sender;
             num2 = Convert.ToDouble(textBox1.Text);
@@ -80,6 +80,7 @@ namespace Test123
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
+            textBox1.Text = "0";
         }
     }
 }
